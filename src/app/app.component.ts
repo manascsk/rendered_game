@@ -9,12 +9,12 @@ import { EventService } from './service/event.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'game';
   eventForm: any
   submitted = false;
   allEvent: any
   event = new Array()
   gameList: any
+  
   @ViewChild('closeModel')
   closeModel!: ElementRef<HTMLElement>;
 

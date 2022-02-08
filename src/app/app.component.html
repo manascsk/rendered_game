@@ -4,7 +4,7 @@
       <option value="">All Available Game</option>
       <option value="{{game.game_name}}" *ngFor="let game of gameList">{{game.game_name}}</option>
     </select>
-    
+
     <div>
       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
         data-bs-whatever="@mdo">New Event</button>
@@ -31,6 +31,10 @@
         <td>{{event.end_date}}</td>
         <td><button type="button" class="btn btn-danger" (click)="deleteEvent(event.id)">Delete</button>
         </td>
+      </tr>
+      <tr *ngIf="event.length === 0">
+        <td colspan="6"><h4 class="text-center">No Event Found</h4></td>
+        
       </tr>
     </tbody>
     <!-- <h6 *ngIf="event.length === 0">
