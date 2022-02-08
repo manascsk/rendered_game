@@ -1,0 +1,6 @@
+.toolbar{
+    display: flex !important;
+}
+.error{
+    color: red;
+}
